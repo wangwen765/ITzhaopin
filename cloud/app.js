@@ -96,6 +96,7 @@ app.post('/',function(req, res){
 	var Ppone=req.query.Ppone;
 	var Pmail=req.query.Pmail;
 	var jplevel=req.query.jplevel;
+	res.render('hello', { message: pposition & Pname });
 	if(pposition && pposition.trim() !=''){
 		//Save visitor
 		var visitor = new Visitor();
@@ -109,7 +110,7 @@ app.post('/',function(req, res){
 	
 		visitor.save(null, {
 			success: function(gameScore) {
-				//renderSuccess(res,pposition,Pname,PAge,jobage,Ppone,Pmail,jplevel);
+				renderSuccess(res,pposition,Pname,PAge,jobage,Ppone,Pmail,jplevel);
 			},
 			error: function(gameScore, error) {
 				res.render('500', 500);
