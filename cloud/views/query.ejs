@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 		<% if (visitors){ %>
 		<%  visitors.forEach(function (visitor){ %>
 		<li>
-		  <p>应征职位：&nbsp <%= visitor.get('position') %> </p>
+		  <p>应征职位：&nbsp <%= visitor.get('pposition') %> </p>
 		  <p>姓名：&nbsp <%= visitor.get('Pname') %> </p>
 		  <p>年龄：&nbsp <%= visitor.get('PAge') %> </p>
 		  <p>JAVA工作经验：&nbsp <%= visitor.get('jobage') %> </p>
