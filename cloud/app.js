@@ -82,9 +82,8 @@ app.get('/query',function(req,res){
 
 app.get('/', function(req, res){
 	var pposition = req.query.pposition;
-	res.render('hello', { message: "2" });
 	if(!pposition)
-		pposition = 'AVOS Cloud';
+		pposition = 'JAVA工程师（東陽町）';
 	renderIndex(res, pposition);
 });
 
