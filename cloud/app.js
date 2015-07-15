@@ -89,7 +89,7 @@ app.get('/', function(req, res){
 
 
 app.post('/',function(req, res){
-	var pposition=req.index.pposition;
+	var pposition=req.pposition;
 	var Pname=req.query.Pname;
 	var PAge=req.query.PAge;
 	var jobage=req.query.jobage;
