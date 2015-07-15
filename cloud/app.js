@@ -58,10 +58,9 @@ function renderSuccess(res,pposition,Pname,PAge,jobage,Ppone,Pmail,jplevel){
 	query.skip(0);
 	query.limit(10000);
 	query.descending('createdAt');
-	res.render('hello', { message: 'Congrats, you just set up your app!2015-07-16' });
 	query.find({
 		success: function(results){
-			res.render('success',{ pposition: pposition,Pname:Pname, PAge:PAge,jobage:jobage,Ppone:Ppone,Pmail:Pmail,jplevel:jplevel,visitors: results});
+			//res.render('success',{ pposition: pposition,Pname:Pname, PAge:PAge,jobage:jobage,Ppone:Ppone,Pmail:Pmail,jplevel:jplevel,visitors: results});
 		},
 		error: function(error){
 			console.log(error);
@@ -98,7 +97,6 @@ app.post('/',function(req, res){
 	var Pmail=req.query.Pmail;
 	var jplevel=req.query.jplevel;
 	if(pposition && pposition.trim() !=''){
-		res.render('hello', { message: 'Congrats, you just set up your app!2015-07-15' });
 		//Save visitor
 		var visitor = new Visitor();
 		visitor.set('pposition', pposition);
