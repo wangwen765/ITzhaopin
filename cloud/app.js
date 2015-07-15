@@ -1,7 +1,7 @@
 // 在Cloud code里初始化express框架
 var express = require('express');
 var app = express();
-var name = require('cloud/name.js');
+//var name = require('cloud/name.js');
 var avosExpressHttpsRedirect = require('avos-express-https-redirect');
 
 
@@ -96,6 +96,7 @@ app.post('/',function(req, res){
 	var Ppone=req.query.Ppone;
 	var Pmail=req.query.Pmail;
 	var jplevel=req.query.jplevel;
+	res.render('hello', { message: 'Congrats, you just set up your app!2015-07-15' });
 	if(pposition && pposition.trim() !=''){
 		//Save visitor
 		var visitor = new Visitor();
