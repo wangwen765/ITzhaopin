@@ -81,7 +81,7 @@ app.get('/query',function(req,res){
 });
 
 app.get('/', function(req, res){
-	var pposition = req.index.pposition;
+	var pposition = req.pposition;
 	if(!pposition)
 		pposition = 'JAVA工程师（東陽町）';
 	renderIndex(res, pposition);
