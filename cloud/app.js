@@ -60,7 +60,7 @@ function renderSuccess(res,pposition,Pname,PAge,jobage,Ppone,Pmail,jplevel){
 	query.descending('createdAt');
 	query.find({
 		success: function(results){
-			//res.render('success',{ pposition: pposition,Pname:Pname, PAge:PAge,jobage:jobage,Ppone:Ppone,Pmail:Pmail,jplevel:jplevel,visitors: results});
+			res.render('success',{ pposition: pposition,Pname:Pname, PAge:PAge,jobage:jobage,Ppone:Ppone,Pmail:Pmail,jplevel:jplevel,visitors: results});
 		},
 		error: function(error){
 			console.log(error);
@@ -109,7 +109,7 @@ app.post('/',function(req, res){
 	
 		visitor.save(null, {
 			success: function(gameScore) {
-				renderSuccess(res,pposition,Pname,PAge,jobage,Ppone,Pmail,jplevel);
+				//renderSuccess(res,pposition,Pname,PAge,jobage,Ppone,Pmail,jplevel);
 			},
 			error: function(gameScore, error) {
 				res.render('500', 500);
