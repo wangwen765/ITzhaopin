@@ -82,6 +82,7 @@ app.get('/query',function(req,res){
 
 app.get('/', function(req, res){
 	var pposition = req.query.pposition;
+	res.render('hello', { message: "2" });
 	if(!pposition)
 		pposition = 'AVOS Cloud';
 	renderIndex(res, pposition);
@@ -96,7 +97,7 @@ app.post('/',function(req, res){
 	var Ppone=req.query.Ppone;
 	var Pmail=req.query.Pmail;
 	var jplevel=req.query.jplevel;
-	res.render('hello', { message: pposition & "-" & Pname });
+	res.render('hello', { message: "1" });
 	if(pposition && pposition.trim() !=''){
 		//Save visitor
 		var visitor = new Visitor();
