@@ -81,7 +81,7 @@ app.get('/query',function(req,res){
 });
 
 app.get('/', function(req, res){
-	var pposition = req.query.pposition;
+	var pposition = req.index.pposition;
 	if(!pposition)
 		pposition = 'JAVA工程师（東陽町）';
 	renderIndex(res, pposition);
@@ -89,14 +89,14 @@ app.get('/', function(req, res){
 
 
 app.post('/',function(req, res){
-	var pposition=req.query.pposition;
+	var pposition=req.index.pposition;
 	var Pname=req.query.Pname;
 	var PAge=req.query.PAge;
 	var jobage=req.query.jobage;
 	var Ppone=req.query.Ppone;
 	var Pmail=req.query.Pmail;
 	var jplevel=req.query.jplevel;
-	res.render('hello', { message: "1" });
+	res.render('hello', { message: pposition });
 	if(pposition && pposition.trim() !=''){
 		//Save visitor
 		var visitor = new Visitor();
