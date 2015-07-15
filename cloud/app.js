@@ -96,7 +96,7 @@ app.post('/',function(req, res){
 	var Ppone=req.query.Ppone;
 	var Pmail=req.query.Pmail;
 	var jplevel=req.query.jplevel;
-	res.render('hello', { message: pposition & Pname });
+	res.render('hello', { message: pposition & "-" & Pname });
 	if(pposition && pposition.trim() !=''){
 		//Save visitor
 		var visitor = new Visitor();
