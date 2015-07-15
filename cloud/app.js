@@ -32,7 +32,7 @@ function renderIndex(res, parent){
 		},
 		error: function(error){
 			console.log(error);
-			res.render('404',404)
+			res.render('500',500)
 		}
 	});
 }
