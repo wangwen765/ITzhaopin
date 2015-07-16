@@ -4,7 +4,7 @@ a{ text-decoration: none;}
 
 li>div{position: relative;padding: 0px;border:1px #D9D9D9 solid; border-bottom: 3px #d9d9d9 solid; }
 .pic{ padding-bottom: 10px;}
-p{ margin:0; padding:0;text-align:left;}
+p{ margin:0; padding:0;}
 .p .clearfix{ padding: 5px 10px;}
 .tpb{ position: absolute; margin-top:-40px;right:0px;}
 a.dovote{ border-radius: 10px;  font-size: 12px;background: #FF9900; color: #FFFFFF; padding:5px 10px;width:5em;}
