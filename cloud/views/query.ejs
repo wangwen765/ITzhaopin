@@ -58,14 +58,14 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 	  <div>
 	  	<% if (visitors){ %>
 		<%  visitors.forEach(function (visitor){ %>
-		&nbsp <%= visitor.get('pposition') %>
+		<p><%= visitor.get('pposition') %>
 		&nbsp <%= visitor.get('Pname') %>
 		&nbsp <%= visitor.get('PAge') %>
 		&nbsp <%= visitor.get('jobage') %>
 		&nbsp <%= visitor.get('Ppone') %>
 		&nbsp <%= visitor.get('Pmail') %>
 		&nbsp <%= visitor.get('jplevel') %>
-		< br />
+		</p>
 		<% })
 		   } %>
 	  </div>
