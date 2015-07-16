@@ -59,12 +59,12 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 	  	<% if (visitors){ %>
 		<%  visitors.forEach(function (visitor){ %>
 		<p><%= visitor.get('pposition') %>
-		&nbsp <%= visitor.get('Pname') %>
-		&nbsp <%= visitor.get('PAge') %>
-		&nbsp <%= visitor.get('jobage') %>
-		&nbsp <%= visitor.get('Ppone') %>
-		&nbsp <%= visitor.get('Pmail') %>
-		&nbsp <%= visitor.get('jplevel') %>
+		,<%= visitor.get('Pname') %>
+		,<%= visitor.get('PAge') %>
+		,<%= visitor.get('jobage') %>
+		,<%= visitor.get('Ppone') %>
+		,<%= visitor.get('Pmail') %>
+		,<%= visitor.get('jplevel') %>
 		</p>
 		<% })
 		   } %>
